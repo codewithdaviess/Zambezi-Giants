@@ -1,8 +1,9 @@
-function App() {
+import Homepage from "./pages/Homepage"
 
+function App() {
   return (
     <>
-        <h1> Welcome to Zambezi Giants</h1>      
+    <Homepage />     
     </>
   )
 }
