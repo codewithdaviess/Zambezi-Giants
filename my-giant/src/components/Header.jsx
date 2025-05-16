@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -34,13 +34,19 @@ const slides = [
 ];
 
 const Header = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const swiperRef = useRef(null);
+
   return (
     <header className="relative h-screen w-full overflow-hidden">
+      {/* Background Swiper */}
       <Swiper
         modules={[Autoplay, EffectFade]}
         autoplay={{ delay: 7000 }}
         effect="fade"
         loop
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)}
         className="absolute inset-0 h-full w-full -z-10"
       >
         {slides.map((slide, index) => (
@@ -60,7 +66,7 @@ const Header = () => {
                   </p>
                   <a
                     href={slide.button.link}
-                    className="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition"
+                    className="bg-transparent border border-white text-white font-semibold py-3 px-8 rounded-full"
                   >
                     {slide.button.text}
                   </a>
@@ -70,10 +76,33 @@ const Header = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
       {/* Fixed Navbar */}
       <div className="fixed top-0 left-0 w-full z-20 pt-6 px-4">
         <Navbar />
       </div>
+
+      {/* Carousel Number Indicator*/}
+     <div className="absolute bottom-6 right-6 z-10 flex items-center space-x-4">
+  {slides.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => swiperRef.current?.slideToLoop(index)}
+      className="transition-all duration-500 ease-out font-bold relative"
+    >
+      <span
+        className={`inline-block transform transition-all duration-500 ${
+          currentIndex === index
+            ? "text-orange-500 text-3xl translate-y-[-2px] scale-110 opacity-100"
+            : "text-white text-xl opacity-60 translate-y-0 scale-100"
+        }`}
+      >
+        {`0${index + 1}`}
+      </span>
+    </button>
+  ))}
+</div>
+
     </header>
   );
 };
