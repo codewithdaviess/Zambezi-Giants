@@ -215,7 +215,7 @@ export default function Navbar() {
       {/* Overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 bg- bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
           onClick={() => setMobileMenuOpen(false)}
         />
       )}
