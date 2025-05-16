@@ -44,7 +44,7 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   return (
-    <nav className="bg-white shadow-2xl mt-6 mx-3 rounded-xl relative z-50">
+    <nav className="bg-white shadow-2xl mx-3 rounded-xl relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Left side */}
