@@ -251,7 +251,7 @@ export default function Navbar() {
                     href="#service1"
                     className="block text-gray-700  hover:text-[#f38031]"
                   >
-                    Service 1
+                    Service 1 
                   </a>
                 </li>
                 <li>
