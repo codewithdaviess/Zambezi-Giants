@@ -8,6 +8,7 @@ import img5 from '../assets/img/5.png';
 import img6 from '../assets/img/6.png';
 import img7 from '../assets/img/7.png';
 import img8 from '../assets/img/8.png';
+
 const destinationData = [
   { city: 'Paris', country: 'France', image: img1 },
   { city: 'Tokyo', country: 'Japan', image: img2 },
