@@ -5,7 +5,7 @@ const Destinations = () => {
   return (
     <section className="py-12 bg-white">
       <h2 className="text-xl md:text-2xl px-4 font-bold text-left mb-6">
-        Popular Destinations
+        Explore Destinations
       </h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-4">
