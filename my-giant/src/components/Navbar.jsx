@@ -1,4 +1,6 @@
-import logo from "../assets/img/logo.png";
+import logoWhite from "../assets/img/logoBlack.png";
+import logoBlack from "../assets/img/logoWhite.png";
+
 import {
   MenuIcon,
   MenuCloseIcon,
@@ -13,9 +15,19 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [userOpen, setUserOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const searchRef = useRef(null);
   const userRef = useRef(null);
+
+  // Detect scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -44,7 +56,11 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   return (
-    <nav className="bg-white shadow-2xl mx-3 rounded-xl relative z-50">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white text-gray-800 shadow-md " : "bg-black/40 text-white"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Left side */}
@@ -56,7 +72,12 @@ export default function Navbar() {
               {mobileMenuOpen ? <MenuCloseIcon /> : <MenuIcon />}
             </div>
             <div className="flex-shrink-0">
-              <img src={logo} alt="Logo" className="h-11 w-auto" />
+              <img
+  src={scrolled ? logoBlack : logoWhite}
+  alt="Logo"
+  className="h-11 w-auto transition-all duration-300"
+/>
+
             </div>
           </div>
 
@@ -66,7 +87,9 @@ export default function Navbar() {
               <li>
                 <a
                   href="#home"
-                  className="text-sm font-medium text-gray-700 hover:text-[#f38031]"
+                  className={`text-sm font-medium ${
+                    scrolled ? "text-gray-800" : "text-white"
+                  } hover:text-[#f38031]`}
                 >
                   Explore
                 </a>
@@ -74,16 +97,18 @@ export default function Navbar() {
               <li className="relative">
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="text-sm font-medium text-gray-700 hover:text-[#f38031]"
+                  className={`text-sm font-medium ${
+                    scrolled ? "text-gray-800" : "text-white"
+                  } hover:text-[#f38031]`}
                 >
                   Services
                 </button>
                 {dropdownOpen && (
-                  <ul className="absolute left-0 mt-2 bg-white border rounded-lg shadow-lg w-48">
+                  <ul className="absolute left-0 mt-2 bg-white border rounded-lg shadow-lg w-48 z-50">
                     <li>
                       <a
                         href="#service1"
-                        className="block px-4 py-2 hover:text-[#f38031] hover:bg-gray-100"
+                        className="block px-4 py-2 hover:text-[#f38031] hover:bg-gray-100 text-gray-700"
                       >
                         Service 1
                       </a>
@@ -91,7 +116,7 @@ export default function Navbar() {
                     <li>
                       <a
                         href="#service2"
-                        className="block px-4 py-2 hover:text-[#f38031] hover:bg-gray-100"
+                        className="block px-4 py-2 hover:text-[#f38031] hover:bg-gray-100 text-gray-700"
                       >
                         Service 2
                       </a>
@@ -102,7 +127,9 @@ export default function Navbar() {
               <li>
                 <a
                   href="#about"
-                  className="text-sm font-medium text-gray-700 hover:text-[#f38031]"
+                  className={`text-sm font-medium ${
+                    scrolled ? "text-gray-800" : "text-white"
+                  } hover:text-[#f38031]`}
                 >
                   About
                 </a>
@@ -110,7 +137,9 @@ export default function Navbar() {
               <li>
                 <a
                   href="#contact"
-                  className="text-sm font-medium text-gray-700 hover:text-[#f38031]"
+                  className={`text-sm font-medium ${
+                    scrolled ? "text-gray-800" : "text-white"
+                  } hover:text-[#f38031]`}
                 >
                   Contact
                 </a>
@@ -249,9 +278,9 @@ export default function Navbar() {
                 <li>
                   <a
                     href="#service1"
-                    className="block text-gray-700  hover:text-[#f38031]"
+                    className="block text-gray-700 hover:text-[#f38031]"
                   >
-                    Service 1 
+                    Service 1
                   </a>
                 </li>
                 <li>
