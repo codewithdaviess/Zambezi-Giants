@@ -17,7 +17,7 @@ const Destinations = () => {
 
   return (
     <section className="py-12 bg-white">
-      <h2 className="text-xl md:text-2xl px-4 font-bold text-left mb-6">
+      <h2 className="text-2xl text-gray-800  md:text-3xl px-4 font-bold text-left mb-6">
         {activeCategory} Destinations
       </h2>
 
