@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 
 import bg1 from "../assets/img/background.png";
 import bg2 from "../assets/img/background2.png";
-import bg3 from "../assets/img/background3.JPG";
+import bg3 from "../assets/img/background3.jpg";
 
 const slides = [
   {
