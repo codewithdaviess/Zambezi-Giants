@@ -17,10 +17,11 @@ const Header = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Explore the World</h1>
-        <p className="text-lg md:text-xl mb-6 max-w-2xl">
-          Discover new places, plan your adventures, and make memories.
-        </p>
+       <h1 className="text-4xl md:text-5xl font-bold mb-2">Wander. Wonder. Discover.</h1>
+<p className="text-lg md:text-xl mb-6 max-w-2xl">
+  Embrace the journey every step tells a story.
+</p>
+
 
         {/* Responsive Search Form */}
         <form className="w-full max-w-xl bg-white/90 rounded-full flex flex-nowrap items-center px-4 py-2 shadow-md backdrop-blur-md">
