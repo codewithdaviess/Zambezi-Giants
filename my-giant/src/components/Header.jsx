@@ -1,9 +1,10 @@
 import React from "react";
 import background from "../assets/img/background.png";
+import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="relative h-[80vh] w-full">
+    <header className="relative h-[90vh] w-full">
       <img
         src={background}
         alt="Destination"
@@ -12,6 +13,7 @@ const Header = () => {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
+      <Navbar />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-4">
