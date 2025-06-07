@@ -1,10 +1,11 @@
 import React from 'react';
-import bgImage from '../assets/img/newsletter.png'; // your background image
+import bgImage from '../assets/img/newsletter.png';
+import HomeSearchForm from './HomeSearchForm';
 
 const Header = () => {
   return (
     <header
-      className="relative flex items-center justify-center text-white"
+      className="relative flex flex-col items-center justify-center text-white px-4"
       style={{
         height: '100vh',
         backgroundImage: `url(${bgImage})`,
@@ -12,13 +13,15 @@ const Header = () => {
         backgroundPosition: 'center',
       }}
     >
-      {/* Optional dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/10 "></div>
+      {/* Dark overlay with subtle opacity */}
+      <div className="absolute inset-0 bg-black/10"></div>
 
-      {/* Header content */}
-      <h1 className="relative text-4xl font-bold z-10">
-        Welcome
+      {/* Heading */}
+      <h1 className="relative text-5xl font-extrabold tracking-wide z-10 text-center max-w-lg">
+        Explore Your Next Adventure
       </h1>
+
+      <HomeSearchForm />
     </header>
   );
 };
