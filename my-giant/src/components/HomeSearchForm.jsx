@@ -94,7 +94,7 @@ const HomeSearchForm = () => {
       </div>
 
       {/* Submit */}
-      <div className="w-full lg:w-auto">
+      <div className="w-full lg:w-auto ">
         <button
           type="submit"
           className="w-full lg:w-auto bg-[#f38031] hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-md transition flex items-center justify-center gap-2"
