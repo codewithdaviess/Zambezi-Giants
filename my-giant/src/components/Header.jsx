@@ -17,7 +17,7 @@ const Header = () => {
       <div className="absolute inset-0 bg-black/10"></div>
 
       {/* Heading */}
-      <h1 className="relative text-5xl font-extrabold tracking-wide z-10 text-center max-w-lg">
+      <h1 className="relative text-3xl lg:text-5xl  font-extrabold tracking-wide z-10 mb-4 text-left lg:text-center max-w-lg">
         Explore Your Next Adventure
       </h1>
 
