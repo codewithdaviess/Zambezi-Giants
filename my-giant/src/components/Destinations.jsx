@@ -17,7 +17,7 @@ const Destinations = () => {
 
   return (
     <section className="py-12 bg-white">
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 px-4 mb-6">
+      <h2 className="text-2xl md:text-2xl font-bold text-gray-800 px-4 mb-6">
         {activeCategory} Destinations
       </h2>
 
@@ -35,7 +35,7 @@ const Destinations = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`py-1 px-3 rounded-full text-sm font-medium border transition-colors whitespace-nowrap ${
                   activeCategory === category
-                    ? "bg-black text-white"
+                    ? "bg-[#f38031] text-white"
                     : "bg-white text-black border-gray-300"
                 }`}
               >
