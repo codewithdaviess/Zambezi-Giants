@@ -143,15 +143,15 @@ const Destinations = () => {
           modules={[Pagination]}
           breakpoints={{
             0: {
-              slidesPerView: 2, 
+              slidesPerView: 2,
               centeredSlides: false,
             },
             768: {
-              slidesPerView: 5, 
+              slidesPerView: 5,
               centeredSlides: false,
             },
           }}
-          className="!overflow-visible"
+          className="!overflow-hidden"
         >
           {filteredDestinations.map((destination, index) => (
             <SwiperSlide
