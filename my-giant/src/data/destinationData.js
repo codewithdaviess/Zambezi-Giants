@@ -1,11 +1,11 @@
-import zanziImg from "../assets/images/destinations/1.png";
-import okavangoImg from "../assets/images/destinations/2.png";
-import vicfallsImg from "../assets/images/destinations/3.png";
-import romeImg from "../assets/images/destinations/4.png";
-import capeTownImg from "../assets/images/destinations/5.png";
-import masaimaraImg from "../assets/images/destinations/6.png";
-import greatzimImg from "../assets/images/destinations/7.png";
-import baliImg from "../assets/images/destinations/8.png";
+import zanziImg from "../assets/img/destinations/1.png";
+import okavangoImg from "../assets/img/destinations/2.png";
+import vicfallsImg from "../assets/img/destinations/3.png";
+import romeImg from "../assets/img/destinations/4.png";
+import capeTownImg from "../assets/img/destinations/5.png";
+import masaimaraImg from "../assets/img/destinations/6.png";
+import greatzimImg from "../assets/img/destinations/7.png";
+import baliImg from "../assets/img/destinations/8.png";
 
 const destinationData = [
   {
