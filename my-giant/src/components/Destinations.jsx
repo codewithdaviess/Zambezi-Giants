@@ -169,7 +169,7 @@ const Destinations = () => {
                 {/* Gradient overlay for better text visibility */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10" />
                 {/* Destination city and country text */}
-                <div className="absolute bottom-2 left-3 z-20 text-white">
+                <div className="absolute bottom-3 left-4 z-20 text-white">
                   <h3 className="text-md font-semibold">{destination.city}</h3>
                   <p className="text-sm">{destination.country}</p>
                 </div>

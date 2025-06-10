@@ -24,7 +24,7 @@ const destinationData = [
     city: "Victoria Falls",
     country: "Zimbabwe",
     image: vicfallsImg,
-    category: "Most Viewed",
+    category: "Popular",
   },
   {
     city: "Poshto",
@@ -36,7 +36,7 @@ const destinationData = [
     city: "Cape Town",
     country: "South Africa",
     image: capeTownImg,
-    category: "Recommended",
+    category: "Popular",
   },
   {
     city: "Masai Mara",
