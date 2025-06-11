@@ -27,9 +27,10 @@ const TravelTours = () => {
                 }`}
               >
                 <Icon className="w-auto shadow-xl hover:shadow-lg transition rounded-full p-2 h-14 text-[#f38031] mb-4" />
-                <h3 className="text-md font-semibold text-gray-800">
+                <h3 className="text-md font-semibold text-gray-800 mb-1">
                   {tour.title}
                 </h3>
+                <p className="text-xs text-gray-500">Hotel · Flight · Guide</p>
               </div>
             );
           })}
