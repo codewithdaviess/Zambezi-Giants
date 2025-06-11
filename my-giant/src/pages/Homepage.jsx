@@ -4,6 +4,7 @@ import NavbarMobile from '../components/NavbarMobile'
 import Header from '../components/Header'
 import Destinations from '../components/Destinations'
 import TravelTours from '../components/TravelTours'
+import Partners from '../components/Partners'
 
 const Homepage = () => {
   return (
@@ -13,6 +14,7 @@ const Homepage = () => {
       <Header />
       <Destinations />
       <TravelTours />
+      <Partners />
     </div>
   )
 }
