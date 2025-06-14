@@ -7,6 +7,7 @@ import TravelTours from '../components/TravelTours'
 import Partners from '../components/Partners'
 import Footer from '../components/Footer'
 import UpcomingEvents from '../components/EventsList'
+import Tours from '../components/Tours'
 
 const Homepage = () => {
   return (
@@ -17,6 +18,7 @@ const Homepage = () => {
       <Destinations />
       <UpcomingEvents />
       <TravelTours />
+      <Tours />
       <Partners />
       <Footer/>
     </div>

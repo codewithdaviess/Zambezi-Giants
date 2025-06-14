@@ -1,24 +1,29 @@
-import logo1 from "../assets/img/partners/horizon.png";
+import wildhorizon from "../assets/img/partners/wildhorizons.png";
+//import shearwater from "../assets/img/partners/shearwater.png";
+//import hwangesafarilodge from "../assets/img/partners/hwangesafarilodge.png";
+//import nomadafrica from "../assets/img/partners/nomadafrica.png";
+//import africanbushcamps from "../assets/img/partners/africanbushcamps.png";
+
 
 export const partnerLogos = [
   {
     name: "Partner One",
-    logo: logo1,
+    logo: wildhorizon,
   },
   {
     name: "Partner Two",
-    logo: logo1,
+    logo: wildhorizon,
   },
   {
     name: "Partner Three",
-    logo: logo1,
+    logo: wildhorizon,
   },
   {
     name: "Partner Four",
-    logo: logo1,
+    logo: wildhorizon,
   },
   {
     name: "Partner Five",
-    logo: logo1,
+    logo: wildhorizon,
   },
 ];
