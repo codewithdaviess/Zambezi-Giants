@@ -16,7 +16,6 @@ const Homepage = () => {
       <NavbarMobile />
       <Header />
       <Destinations />
-      <UpcomingEvents />
       <TravelTours />
       <Tours />
       <Partners />
